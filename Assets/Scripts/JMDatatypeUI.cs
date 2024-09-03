@@ -12,7 +12,7 @@ public class JMDatatypeUI: MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
@@ -20,7 +20,12 @@ public class JMDatatypeUI: MonoBehaviour
     {
         if (toggleUI.isOn)
         {
-
+            Kirby.rectTransform.Rotate(new Vector3(0f, 30f, 30f));
         }
+    }
+
+    void FlipKirby()
+    {
+        Kirby.rectTransform.Rotate(new Vector3(0f, 30f, 30f));
     }
 }
