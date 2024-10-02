@@ -6,6 +6,8 @@ public class cubemover : MonoBehaviour
 {
     public List<GameObject> cubesquad;
     // Start is called before the first frame update
+
+    public Vector3 scaleChange, positionChange;
     void Start()
     {
         //cubesquad[0].transform.position += new Vector3(0, 10, 0);
@@ -21,6 +23,10 @@ public class cubemover : MonoBehaviour
         foreach (GameObject ONEcube in cubesquad)
         {
             ONEcube.transform.Rotate(20 * Time.deltaTime , 0, 0);
+        }
+        for (int i = 2;i<cubesquad.Count;i++)
+        {
+            cubesquad[i].transform.localScale += scaleChange = new Vector3(0.001f, 0.001f, 0.001f);
         }
     }
 }
